@@ -36,6 +36,37 @@ void format_specifier(const char *format, va_list list)
 				putchar(buf[i]);
 			}
 			break; }
+		case 'i': {
+                        const int num = va_arg(list, int);
+
+			for (i = 0; buf[i]; i++)
+			{
+				if (buf[i] /= 10)
+				{
+					int_to_str(num, 10, buf);
+					putchar(buf[i]);
+				}
+				else if (buf[i] /= 16)
+				{
+					if ('x')
+					{
+						int_to_str(num, 16, buf);
+						putchar(buf[i]);
+					}
+					else if('X')
+					{
+						hex_X(num, 16, buf);
+						putchar(buf[i]);
+					}
+				}
+				else if (buf[i] /= 8)
+				{
+					int_to_str(num, 16, buf);
+					putchar(buf[i]);
+				}
+				putchar(buf[i]);
+			}
+			break; }
 		case 'x': {
 			const int num = va_arg(list, int);
 
