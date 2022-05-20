@@ -64,6 +64,11 @@ void format_specifier(const char *format, va_list list)
 					int_to_str(num, 16, buf);
 					putchar(buf[i]);
 				}
+				else if (buf[i] /= 2)
+                                {
+					int_to_str(num, 2, buf);
+					putchar(buf[i]);
+				}
 				putchar(buf[i]);
 			}
 			break; }
