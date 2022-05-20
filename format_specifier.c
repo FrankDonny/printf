@@ -11,7 +11,6 @@ void format_specifier(const char *format, va_list list)
 {
 	char buf[32];
 	int i;
-	/*char ch = va_arg(list, int);*/
 
 	switch (*format)
 	{
@@ -65,6 +64,33 @@ void format_specifier(const char *format, va_list list)
 			{
 				putchar(buf[i]);
 			}
+			break; }
+		case 'u': {
+			const int num = va_arg(list, int);
+
+			un_int_to_str(num, 10, buf);
+			for (i = 0; buf[i]; i++)
+			{
+				putchar(buf[i]);
+			}
+			break; }
+		case 'o': {
+			const int num = va_arg(list, int);
+
+			un_int_to_str(num, 8, buf);
+			for (i = 0; buf[i]; i++)
+			{
+				putchar(buf[i]);
+			}
+			break; }
+		default: {
+			if (*format == 'r')
+			{
+				putchar('%');
+				putchar(*format);
+			}
+			else
+				putchar(*format);
 			break; }
 	}
 }

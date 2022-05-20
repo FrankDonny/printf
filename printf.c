@@ -7,7 +7,7 @@
  * to be printed
  * Return: a void pointer
  */
-void *_printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	va_list list;
 
