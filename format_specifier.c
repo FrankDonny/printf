@@ -119,6 +119,15 @@ void format_specifier(const char *format, va_list list)
 				putchar(buf[i]);
 			}
 			break; }
+		case 'b': {
+			const int num = va_arg(list, int);
+
+			un_int_to_str(num, 2, buf);
+			for (i = 0; buf[i]; i++)
+			{
+				putchar(buf[i]);
+			}
+			break; }
 		default: {
 			if (*format == 'r')
 			{
