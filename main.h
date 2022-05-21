@@ -10,8 +10,8 @@ typedef struct flags
         int plus;
         int space;
         int hash;
-	/*int negative;
-	int zero;*/
+	int negative;
+	int zero;
 } raise_flag;
 
 typedef struct decide_func_formatSpec

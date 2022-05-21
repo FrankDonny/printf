@@ -17,10 +17,10 @@ int get_int(va_list list, raise_flag *format)
 		cd += _putchar(' ');
 	if (format->plus == 1 && n >= 0)
 		cd += _putchar('+');
-	/*if (format->zero == 1 && n >= 0)
+	if (format->zero == 1 && n >= 0)
 		cd += _putchar('0');
 	if (format->negative == 1 && n >= 0)
-		cd += _putchar('-');*/
+		cd += _putchar('-');
 	if (n <= 0)
 		cd++;
 	get_number(n);

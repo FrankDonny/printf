@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int (*pfunc)(va_list, raise_flag *);
 	const char *ptr;
 	va_list list;
-	raise_flag flags = {0, 0, 0};
+	raise_flag flags = {0, 0, 0, 0, 0};
 
 	register int ct = 0;
 
