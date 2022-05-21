@@ -26,6 +26,12 @@ int _flags(char str, raise_flag *format)
 			format->hash = 1;
 			i = 1;
 			break;
+		/*case '0':
+			format->zero = 1;
+			break;
+		case '-':
+			format->negative = 1;
+			break;*/
 	}
 
 	return (i);
