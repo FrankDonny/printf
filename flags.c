@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _flags - this function shows a flag when printf
  * finds a flag modifier int the format string
@@ -33,6 +32,5 @@ int _flags(char str, raise_flag *format)
 			format->negative = 1;
 			break;
 	}
-
 	return (i);
 }

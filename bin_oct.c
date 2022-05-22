@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _binary - function that converts numbers to base 2 numbers
  * @list: - the parameter that holds the arguments from the
@@ -33,7 +32,7 @@ int _octal(va_list list, raise_flag *format)
 	int ct = 0;
 
 	if (format->hash == 1 && str[0] != '0')
-		ct += _putchar('0');
+	ct += _putchar('0');
 	ct += _puts(str);
 	return (ct);
 }

@@ -18,7 +18,7 @@ int _address(va_list list, raise_flag *format)
 	(void)format;
 
 	if (!p)
-		return (_puts("(nil)"));
+	return (_puts("(nil)"));
 	str = num_bases(p, 16, 1);
 	ct += _puts("0x");
 	ct += _puts(str);

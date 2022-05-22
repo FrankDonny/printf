@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _bigS - prints non printable characters \x, followed by the ASCII code
  * @list: va_list arguments from _printf
@@ -15,7 +14,7 @@ int _bigS(va_list list, raise_flag *format)
 
 	(void)format;
 	if (!s)
-		return (_puts("(null)"));
+	return (_puts("(null)"));
 
 	for (a = 0; s[a]; a++)
 	{
@@ -25,11 +24,11 @@ int _bigS(va_list list, raise_flag *format)
 			ct += 2;
 			res = num_bases(s[a], 16, 0);
 			if (!res[1])
-				ct += _putchar('0');
+			ct += _putchar('0');
 			ct += _puts(res);
 		}
 		else
-			ct += _putchar(s[a]);
+		ct += _putchar(s[a]);
 	}
 	return (ct);
 }
@@ -48,13 +47,13 @@ int str_rev(va_list list, raise_flag *format)
 
 	(void)format;
 	if (!s)
-		s = "(null)";
+	s = "(null)";
 
 	while (s[i])
 		i++;
 
 	for (j = i - 1; j >= 0; j--)
-		_putchar(s[j]);
+	_putchar(s[j]);
 
 	return (i);
 }

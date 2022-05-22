@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * get_string - this funtion outputs strings to standard output
  * @list: the parameter that holds the arguments in va_list
@@ -15,7 +14,7 @@ int get_string(va_list list, raise_flag *format)
 	(void)format;
 
 	if (!s)
-		s = "(null)";
+	s = "(null)";
 	return (_puts(s));
 }
 

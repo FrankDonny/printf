@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdarg.h>
-
 /**
  * unsigned_int - this funtion outputs unsigned integers to standard output
  * @list: the parameter that holds the arguments in va_list
@@ -28,13 +27,13 @@ void get_number(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
-		n1 = -n;
+	_putchar('-');
+	n1 = -n;
 	}
 	else
-		n1 = n;
+	n1 = n;
 
 	if (n1 / 10)
-		get_number(n1 / 10);
+	get_number(n1 / 10);
 	_putchar((n1 % 10) + '0');
 }
