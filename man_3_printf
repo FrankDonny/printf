@@ -6,9 +6,10 @@
  .nf
  .BI printf (Format, Argument)...
  .PP
- .BI "#include 'main.h'
+ .BI "#include "main.h"
  .BI "#include <stdarg.h>"
- .BI "#include <unistd.h>"
+ .BI "#include <stdio.h>"
+ .BI "#include <stdlib.h>"
  .PP
  .BI "int _printf(const char *format, ...);"
  .BI "int get_int(va_list list, raise_flag *format);"
