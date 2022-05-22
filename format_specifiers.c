@@ -19,7 +19,7 @@ int (*format_specifier(char s))(va_list, raise_flag *)
 		{'b', _binary},
 		{'o', _octal},
 		{'R', _rot13},
-		{'r', str_rev},
+		{'r', print_r},
 		{'S', _bigS},
 		{'p', _address},
 		{'%', _percent}
