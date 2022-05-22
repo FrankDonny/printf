@@ -41,6 +41,5 @@ int _putchar(char c);
 int _puts(char *str);
 int _rot13(va_list list, raise_flag *format);
 int _percent(va_list list, raise_flag *format);
-int print_r(va_list list, raise_flag *format);
 
 #endif
