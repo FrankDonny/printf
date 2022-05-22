@@ -1,8 +1,6 @@
 # Authors: Frank Donny and Kelvin Mwanzia
 This repository contains a C function that acts
 similar to the standard C printf function.
-This project required us to create our
-own _printf which is an equivalent to the normal standard printf.
 
 
 # Prototypes Used:
