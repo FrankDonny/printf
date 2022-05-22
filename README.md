@@ -5,7 +5,7 @@ This project required us to create our
 own _printf which is an equivalent to the normal standard printf.
 
 
-#Prototypes Used
+# Prototypes Used:
 int _printf(const char *format, ...)
 int get_int(va_list list, raise_flag *format)
 int unsigned_int(va_list list, raise_flag *format)
