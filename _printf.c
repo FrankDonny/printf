@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	int (*pfunc)(va_list, raise_flag *);
+	int (*myPtr_func)(va_list, raise_flag *);
 	const char *ptr;
 	va_list list;
 	raise_flag flags = {0, 0, 0, 0, 0};
@@ -38,8 +38,8 @@ int _printf(const char *format, ...)
 			}
 			while (_flags(*ptr, &flags))
 				ptr++;
-			pfunc = format_specifier(*ptr);
-			ct += (pfunc) ? pfunc(list, &flags) : _printf("%%%c", *ptr);
+			myPtr_func = format_specifier(*ptr);
+			ct += (myPtr_func) ? myPtr_func(list, &flags) : _printf("%%%c", *ptr);
 		}
 		else
 			ct += _putchar(*ptr);
