@@ -27,9 +27,11 @@ int _flags(char str, raise_flag *format)
 			break;
 		case '0':
 			format->zero = 1;
+			i = 1;
 			break;
 		case '-':
 			format->negative = 1;
+			i = 1;
 			break;
 	}
 	return (i);
