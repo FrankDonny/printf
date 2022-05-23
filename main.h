@@ -5,19 +5,35 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+/**
+ * struct flags - is the structure containing the flags for
+ * plus, space, hash, negative and zero
+ * @plus: the '+' flag
+ * @space: the ' ' flag
+ * @hash: the '#' flag
+ * @negative: the '-' flag
+ * @zero: the '0' flag
+ */
 typedef struct flags
 {
-        int plus;
-        int space;
-        int hash;
+	int plus;
+	int space;
+	int hash;
 	int negative;
 	int zero;
 } raise_flag;
 
+
+/**
+ * struct decide_func_formatSpec - the structure that determines the format
+ * specifier correspondent to be used
+ * @d: member of decide_func_formatSpec
+ * @format: points to the raise_flag structure
+ */
 typedef struct decide_func_formatSpec
 {
-        char d;
-        int (*format)(va_list list, raise_flag *format);
+	char d;
+	int (*format)(va_list list, raise_flag *format);
 } dff_spec;
 
 int _printf(const char *format, ...);
